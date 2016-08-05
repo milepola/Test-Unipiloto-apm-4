@@ -1,0 +1,40 @@
+<form name="DataForm" novalidate>
+
+<p>
+    <label for="firstname">Nombre</label>
+    
+<input type="text" name="firstname" value="" ng-model="firstname" required/>
+    <span style="color:#ff2a25" ng-show="DataForm.firstname.$dirty">
+      <span ng-show="DataForm.firstname.$error.required">Nombre es requerido.</span>
+   </span>
+</p>
+
+<p>
+    <label for="email">Correo</label>
+    
+<input type="email" name="email" value="" ng-model="email" required/>
+    <span style="color:#ff2a25" ng-show="DataForm.email.$dirty && DataForm.email.$invalid">
+      <span ng-show="DataForm.email.$error.required">Email es requerido.</span>
+	  <span ng-show="DataForm.email.$error.email">Error en formato.</span>
+   </span>
+</p>
+
+<p>
+    <label for="age">Edad</label>
+    
+<input type="number" name="age" value="" ng-model="age" required/>
+    <span style="color:#ff2a25" ng-show="DataForm.age.$dirty && DataForm.age.$invalid">
+      <span ng-show="DataForm.age.$error.required">la edad es requerida.</span>
+	  <span ng-show="DataForm.age.$error.number">Error en formato numerico.</span>
+   </span>
+</p>
+   <p>
+       <button
+	ng-disabled="DataForm.firstname.$dirty  && DataForm.firstname.$invalid ||
+			  DataForm.email.$dirty && DataForm.email.$invalid ||
+			  DataForm.age.$dirty && DataForm.age.$invalid"
+	ng-click="submit()">Registrar</button>
+
+    <button ng-click="reset()">Limpiar</button>
+   </p>
+</form>

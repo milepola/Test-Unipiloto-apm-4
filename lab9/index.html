@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div ng-controller="appController">
+		<p><label for="valuea">Valor 1:</label></p>
+		<p><input type="number" name="valuea" ng-model="mvaluea"></p>
+		<p><label for="valueb">Valor 2:</label></p>
+		<p><input type="number" name="valueb" ng-model="mvalueb"></p>
+
+		<button ng-click="SumButton()">Sumar</button>
+		<button ng-click="MulButton()">Multiplicar</button>
+		<button ng-click="ResButton()">Restar</button>
+		<button ng-click="DivButton()">Dividir</button>
+
+		<p><label >Resultado Suma:</label></p>
+		<h1>{{mvaluea+mvalueb}}</h1> 
+		<p><input type="text" name="valuer2" value={{mvaluea+mvalueb}} ></p>
+		<p><input type="number" name="valuer" value="" ng-model="valuer" ></p>
+		
+		<p><label >Resultado Multiplicacion:</label></p>
+		<h1>{{mvaluea*mvalueb}}</h1>
+		<p><input type="text" name="valuer2" value={{mvaluea*mvalueb}} ></p>
+		<p><input type="number" name="valuerm" value="" ng-model="valuerm" ></p>
+		
+		<p><label >Resultado Resta:</label></p>
+		<h1>{{mvaluea-mvalueb}}</h1>  
+		<p><input type="text" name="valuer2" value={{mvaluea-mvalueb}} ></p>
+		<p><input type="number" name="valuerr" value="" ng-model="valuerr" ></p>
+		
+		<p><label >Resultado division:</label></p>
+		<h1>{{mvaluea/mvalueb}}</h1>
+		<p><input type="text" name="valuer2" value={{mvaluea/mvalueb}} ></p>
+		<p><input type="number" name="valuerd" value="" ng-model="valuerd" ></p>
+
+		
+		
+
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script type="text/javascript">
+	angular.module('app', [])
+		   .controller('appController', function($scope){
+		   		$scope.SumButton = function(){
+		   			$scope.valuer = $scope.mvaluea + $scope.mvalueb;
+		   		};
+				   $scope.MulButton = function(){
+		   			$scope.valuerm = $scope.mvaluea * $scope.mvalueb;
+		   		};
+				 $scope.ResButton = function(){
+		   			$scope.valuerr = $scope.mvaluea - $scope.mvalueb;
+		   		};
+				   $scope.DivButton = function(){
+		   			$scope.valuerd = $scope.mvaluea / $scope.mvalueb;
+		   		};
+		   });
+	</script>
+
+
+</body>
+</html>

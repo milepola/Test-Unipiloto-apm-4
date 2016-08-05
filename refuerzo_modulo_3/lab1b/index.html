@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="lab1b">
+<head>
+    <title></title>
+</head>
+<body>
+    <div ng-controller="lab1bController">
+        <h1>FILTERS</h1>
+		<ul>
+			<li ng-repeat="filter in angular_filters">{{ filter  }}</li>
+		</ul>
+
+		<h1>INPUT</h1>
+		<ul>
+			<li ng-repeat="input in angular_input">{{ input }}</li>
+		</ul>
+
+    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/lab1b.js"></script>
+
+
+</body>
+</html>

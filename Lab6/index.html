@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div ng-app>
+		<p><label for="firstname">Nombre:</label></p>
+		<p><input type="text" name="firstname" value="" ng-model="mfirstname"></p>
+		<p><label for="lastname">Apellido:</label></p>
+		<p><input type="text" name="lastname" value="" ng-model="mlastname"></p>
+		<p><label for="phone">Telefono:</label></p>
+		<p><input type="text" name="phone" value="" ng-model="mphone"></p>
+
+<ul>
+	<li ng-bind="mfirstname"></li>
+	<li ng-bind="mlastname"></li>
+	<li ng-bind="mphone"></li>
+</ul>
+	
+	</div>
+	<script type="text/javascript"src="angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+angular.module("lab1c",[]).controller("lab1cController",function(a){a.link_image="http://dummyimage.com/200x200/000/34ffddaa",a.changeLinkImage=function(){"http://dummyimage.com/200x200/000/34ffddaa"==a.link_image?a.link_image="http://dummyimage.com/200x300/000/34ffddaa":a.link_image="http://dummyimage.com/200x200/000/34ffddaa"}});

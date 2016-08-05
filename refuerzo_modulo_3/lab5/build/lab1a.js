@@ -1,0 +1,1 @@
+angular.module("lab1a",[]).controller("lab1aController",function(a){a.name="claudia milena",a.id="55176847",a.profession="ingeniera",a.salary="100000",a.phone="300123456",a.address="calle 7 # 16"});

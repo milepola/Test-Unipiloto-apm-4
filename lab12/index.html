@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="angular_ajax">
+<head>
+	<title>Lab16</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body>
+	<h1>AJAX AngularJS</h1>
+
+	<div ng-controller="studentController">
+		<table>
+		   <tr>
+		      <th>Name</th>
+		      <th>Address</th>
+		   </tr>
+		   <tr ng-repeat="school in Schools">
+		      <td>{{ school.Name }}</td>
+		      <td>{{ school.Address }}</td>
+		   </tr>
+		</table>
+
+		<table>
+		   <tr>
+		      <th>Name</th>
+		      <th>Last Name</th>
+		   </tr>
+		   <tr ng-repeat="student in Students">
+		      <td>{{ student.FirstName }}</td>
+		      <td>{{ student.LastName }}</td>
+		   </tr>
+		</table>
+	</div>
+    <script>
+       angular.module('angular_ajax', [])
+              .controller('studentController', function($scope, $http){
+              	var url = "school.json";
+              	var url2 = "student.json";
+				  
+              	$http.get(url).success(function(response){
+
+              		console.log(response);
+              		
+              		$scope.Schools = response;
+              	});
+
+				  $http.get(url2).success(function(response){
+
+              		console.log(response);
+              		
+              		$scope.Students = response;
+              	});
+              });
+    </script>
+</body>
+</html>

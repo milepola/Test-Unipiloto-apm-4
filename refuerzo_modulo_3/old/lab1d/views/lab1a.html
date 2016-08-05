@@ -1,0 +1,11 @@
+<div ng-controller="lab1aController">
+        <p>Nombre: <span ng-bind="name" style="text-transform:uppercase" ></span> </p>
+        <p>Nombre con expresion: {{ name | uppercase }}</p>
+        <p>Id: {{ id }}</p>
+        <p>Profesion: {{ profession }}</p>
+        <p>Salario: {{ salary | currency: "$" }}</p>
+        <p>Telefono: {{ phone }}</p>
+        <p>Direccion: {{ address }}</p>
+
+        <p><input type="text" name="name" ng-model="name" ></p>
+    </div>
