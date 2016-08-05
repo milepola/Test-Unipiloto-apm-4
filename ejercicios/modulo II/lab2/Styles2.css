@@ -1,0 +1,65 @@
+
+	
+@media screen and (max-width: 991px) { 
+ #Content #one
+{
+	color:#A49F9F;
+	}
+
+#Content #two
+{
+	color:#CD853F;
+	}
+	
+#Content #three
+{
+	color:pink;
+	}
+	#img {
+		display:none;
+		}
+}
+
+@media screen and (min-width: 992px){ 
+ #Content #one
+{
+	color:blue;
+	}
+
+#Content #two
+{
+	color:red;
+	}
+	
+#Content #three
+{
+	color:green;
+	}	
+	#img {
+		display:none;
+		}
+}
+
+
+
+@media screen and (min-width: 1200px) { 
+ #Content #one
+{
+	color:yellow;
+	background-image:url(fondo.jpg);
+	display:none;
+	}
+
+#Content #two
+{
+	color:green;
+	}
+	
+#Content #three
+{
+	color:blue;
+	}
+	#img {
+		display:inline;
+		}
+}

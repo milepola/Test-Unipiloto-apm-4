@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="changeStyles">
+<head>
+	<title>Lab11</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller="ChangeColor">
+
+        <div class="container">
+            <h2 ng-style="stypes2">TITULO</h2>
+
+            <p ng-class="special_class2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            
+        
+        </div>
+        
+        <button ng-click="changePColor()">Cambiar color</button>
+
+        <button ng-dblclick="changeFont()">Cambiar fuente</button>
+
+    </div>
+	
+	<script type="text/javascript">
+
+        angular.module('changeStyles', [])
+               .controller('ChangeColor', ['$scope', function($scope){
+
+
+                $scope.changePColor = function(){
+                    $scope.stypes2 = {
+                        "color": "red"
+                    };
+                };
+            
+                $scope.changeFont = function(){
+                    $scope.special_class2 = "FontText";
+                 };
+
+               }]);
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+ div{
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+}
+.container{
+    border: solid 2px;
+}
+.FontText{
+    font-style: italic;
+    font-weight: bold;  
+}

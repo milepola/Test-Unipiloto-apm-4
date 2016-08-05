@@ -1,0 +1,36 @@
+header
+{
+	 border: 1px solid red; 
+
+	}
+
+#Content
+{	 max-width: 993px;
+	}
+
+footer
+{
+	border: 1px solid blue; 
+	 margin:50% 0 0 0 ;
+	}
+
+@media screen and (max-device-width: 768px) { 
+#Header
+{
+	 display:none;
+	}
+#Content #img1
+{
+	position:absolute; 
+	margin:500px 0px 0px 0px;
+}
+#Content #img2
+{
+	position:absolute;
+	margin:250px 0px 0px 0px;
+	}
+#Content #img3
+{
+	 margin:0px 0px 0px 0px;
+	}
+}

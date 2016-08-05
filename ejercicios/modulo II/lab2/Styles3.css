@@ -1,0 +1,74 @@
+	
+@media screen and (max-width: 991px) { 
+ #Content #one
+{
+	color:#A49F9F;
+	position: absolute;
+	top:100px;
+}
+
+#Content #two
+{
+	color:#CD853F;
+	position: absolute;
+	top:50px;
+	}
+	
+#Content #three
+{
+	color:pink;
+	position: absolute;
+	top:150px;
+	}
+	
+}
+
+@media screen and (min-width: 992px){ 
+ #Content #one
+{
+	color:blue;
+	position: absolute;
+	top:50px;
+	}
+
+#Content #two
+{
+	color:red;
+	position: absolute;
+	top:100px;
+	}
+	
+#Content #three
+{
+	color:green;
+	position: absolute;
+	top:150px;
+	}	
+	
+}
+
+
+
+@media screen and (min-width: 1200px) { 
+ #Content #one
+{
+	color:red;
+	position: absolute;
+	top:50px;
+	}
+
+#Content #two
+{
+	color:green;
+	position: absolute;
+	top:100px;
+	}
+	
+#Content #three
+{
+	color:blue;
+	position: absolute;
+	top:150px;
+	}
+	
+}
