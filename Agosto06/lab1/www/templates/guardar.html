@@ -1,0 +1,20 @@
+<ion-view title="Guardar" id="page1" class=" ">
+    <ion-content padding="true" class="has-header">
+        <button id="guardar-button1" class=" button button-positive  button-block " ng-click="getCurrentDeviceMotion()">Mostrar</button>
+        <ion-list id="page-list1" class=" ">
+            <ion-item id="page-list-item1" class="  ">{{x}}</ion-item>
+            <ion-item id="page-list-item2" class="  ">{{y}}</ion-item>
+            <ion-item id="page-list-item3" class="  ">{{z}}</ion-item>
+            <ion-item id="page-list-item3" class="  ">{{timeStamp}}</ion-item>
+        </ion-list>
+
+        <button id="page-button2" class=" button button-positive  button-block " ng-click="getWatchDeviceMotion()">Obtener información</button>
+        <ion-list id="page-list2" class=" ">
+            <ion-item id="page2-list-item1" class="  ">{{x}}</ion-item>
+            <ion-item id="page2-list-item2" class="  ">{{y}}</ion-item>
+            <ion-item id="page2-list-item3" class="  ">{{z}}</ion-item>
+            <ion-item id="page2-list-item3" class="  ">{{timeStamp}}</ion-item>
+        </ion-list>
+         <button id="page-button2" class=" button button-assertive  button-block " ng-click="getStopWatchDeviceMotion()">Detener</button>
+    </ion-content>
+</ion-view>
