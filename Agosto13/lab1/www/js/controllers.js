@@ -23,6 +23,22 @@ function ($scope, $stateParams, productService) {
     });
 	}
     
+	var data = {
+        "name": "Galaxy Tab",
+        "type": "smartphone",
+        "quantity": 10,
+        "price": 1200000
+    };
+
+
+	$scope.productCreate = function(){
+		productService.item_create.save(data, function(data){
+
+        $scope.data = data;
+
+        console.log($scope.data);
+    });
+	}
 }])
  
  
