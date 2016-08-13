@@ -1,9 +1,9 @@
 angular.module('app.controllers', ['ngCordova'])
   
-.controller('pageCtrl', ['$scope', '$stateParams', '$cordovaDialogs',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('pageCtrl', ['$scope', '$stateParams', '$cordovaDialogs','$cordovaGeolocation',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $cordovaDialogs) {
+function ($scope, $stateParams, $cordovaDialogs,$cordovaGeolocation) {
 
 $scope.getAlert = function(){
 		$cordovaDialogs.alert('Este es un mensaje informativo', 'Informacion', 'OK')
@@ -33,6 +33,20 @@ $scope.getAlert = function(){
 
     	});
      };
+
+$scope.getCordovaGeolocation = function(){
+		var posOptions = {frequency : 1000, timeout: 3000};
+		  $cordovaGeolocation
+		    .getCurrentPosition(posOptions)
+		    .then(function (position) {
+			      $scope.lat  = position.coords.latitude
+			      $scope.long = position.coords.longitude
+			      console.log(position.coords);
+		    }, function(err) {
+		    	console.log(err);
+		    });
+		}
+
 
 }])
  
