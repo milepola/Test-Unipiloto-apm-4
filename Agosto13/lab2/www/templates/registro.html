@@ -1,0 +1,23 @@
+<ion-view title="Registro" id="page3">
+    <ion-content padding="true" class="has-header">
+        <form id="registro-form1" class="list ">
+            <label class="item item-input " id="registro-input1">
+                <span class="input-label">Nombre</span>
+                <input type="text" placeholder="" ng-model="name">
+            </label>
+            <label class="item item-input " id="registro-input2">
+                <span class="input-label">Tipo</span>
+                <input type="text" placeholder="" ng-model="type">
+            </label>
+            <label class="item item-input " id="registro-input3">
+                <span class="input-label">Cantidad</span>
+                <input type="text" placeholder="" ng-model="quantity">
+            </label>
+            <label class="item item-input " id="registro-input4">
+                <span class="input-label">Precio</span>
+                <input type="text" placeholder="" ng-model="price">
+            </label>
+        </form>
+        <button id="registro-button1" class=" button button-positive  button-block " ng-click="productCreate()">Registrar</button>
+    </ion-content>
+</ion-view>
