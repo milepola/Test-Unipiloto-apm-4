@@ -5,7 +5,7 @@ angular.module('app.controllers', ['app.services','ngCordova'])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams,productService, $cordovaDialogs) {
 
-productService.item_detailPerfil.get({id: 1}, function(data){
+productService.item_detailPerfil.get({email: 'admin@admin.com'}, function(data){
         $scope.item = data;
         console.log($scope.item);
     });
@@ -18,8 +18,9 @@ $scope.getSignOut = function(){
 		      var btnIndex = buttonIndex;
               if(btnIndex == 1)
               {
-                productService.item_signout.get({id: 1}, function(data){
-                        $scope.item = data;
+                productService.item_signout.save( $scope.item, function(data){
+                $scope.item = data;
+                        
                         console.log($scope.item);
                     });
               }
@@ -41,9 +42,11 @@ $scope.getSignOut = function(){
 		      var btnIndex = buttonIndex;
               if(btnIndex == 1)
               {
-                productService.item_deleteaccount.delete({id: 1}, function(data){
+                
+                console.log( $scope.item);
+                productService.item_deleteaccount.delete({email: $scope.item.email}, function(data){
                         
-                        console.log('BORRO REGISTRO');
+                        console.log('BORRO REGISTRO' + data.$status);
                     });
               }
               else

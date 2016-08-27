@@ -17,18 +17,22 @@ $scope.getRegisterProduct = function(){
     };
 
    
-productService.item_create.save(data, function(data){
 
-        $scope.data = data;
-
-        console.log($scope.data);
-    });
 
 		$cordovaDialogs.confirm('Creando Producto', 'Confirma creación del producto ' + $scope.name , ['Ok','Cancel'])
 		    .then(function(buttonIndex) {
 		      // no button = 0, 'OK' = 1, 'Cancel' = 2
-		      //var btnIndex = buttonIndex;
+		      var btnIndex = buttonIndex;
               //localStorage.setItem('confirm','EL USUARIO SELECCIONO LA OPCION' + btnIndex);
+              if(btnIndex == 1)
+                {
+                    productService.item_create.save(data, function(data){
+
+                    $scope.data = data;
+
+                    console.log($scope.data);
+                });}
+            else{console.log('OPCION 2');}
 
     		});
 	};
